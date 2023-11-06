@@ -1,0 +1,27 @@
+<body>
+    <form (ngSubmit)="onSubmit(date, entry)" [formGroup]="diaryForm" class="form-container">
+        <textarea type="text" id="notetextarea" formControlName="entry" placeholder="Напишите заметку!"></textarea>
+        <div id="selections">
+            <select onchange="notetextarea.style.fontSize = this.value;" class="font-select">
+                <option value="6px">6px</option>
+                <option value="8px">8px</option>
+                <option value="10px">10px</option>
+                <option value="12px" selected="selected">12px</option>
+                <option value="14px">14px</option>
+                <option value="16px">16px</option>
+                <option value="18px">18px</option>
+                <option value="20px">20px</option>
+                <option value="22px">22px</option>
+            </select>
+            <select onchange="notetextarea.style.fontStyle = this.value;" class="font-select">
+                <option value="normal" selected="selected">Обычный</option>
+                <option value="italic">Курсив</option>
+            </select>
+            <select onchange="notetextarea.style.fontWeight = this.value;" class="font-select">
+                <option value="normal" selected="selected">Обычный</option>
+                <option value="bold">Жирный</option>
+            </select>
+        </div>
+        <button class="btn btn-success">Применить</button>
+    </form>
+</body>

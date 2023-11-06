@@ -1,0 +1,14 @@
+<body>
+    <table class="note-container">
+        <tbody class="table-body">
+            <tr *ngFor="let diaryEntry of diaryEntries; let i = index" class="table-row">
+                <td class="table-data">{{diaryEntry.date}}</td>
+                <td class="table-data-entry">{{diaryEntry.entry}}</td>
+                <td class="table-data-btn">
+                    <button (click)="onEdit(i)" class="btn btn-light">Редактировать</button>
+                    <button (click)="onDelete(i)" class="btn btn-danger">Удалить</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
